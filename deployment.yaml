@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: devops-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: app
+      app: devops-app
   template:
     metadata:
       labels:
-        app: app
+        app: devops-app
     spec:
       containers:
       - name: app
-        image: anjli14/app:v1
+        image: yourdockerhub/devops-app:latest
         ports:
         - containerPort: 8080
